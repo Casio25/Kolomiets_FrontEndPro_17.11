@@ -1,9 +1,12 @@
-const age = prompt("Введіть свій вік: ");
+const birthDate = prompt("Введіть свій вік: ");
+const age = (2022 - Number(birthDate));
 
 if (age == undefined || age == "") {
     alert("ви не ввели свій вік");
 }else if(isNaN(age)){
-    alert(`${age} is not a number`);
+    alert(`${birthDate} is not a number`);
+}else{
+    alert(`Вам, ${age}`)
 }
 
 const city = prompt("Введіть своє місто: ");
