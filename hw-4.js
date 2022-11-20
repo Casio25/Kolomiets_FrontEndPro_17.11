@@ -1,8 +1,8 @@
-const birthDate = prompt("Введіть свій вік: ");
+const birthDate = prompt("Введіть свою дату народження: ");
 const age = (2022 - Number(birthDate));
 
 if (age == undefined || age == "") {
-    alert("ви не ввели свій вік");
+    alert("ви не ввели свою дату народження");
 }else if(isNaN(age)){
     alert(`${birthDate} is not a number`);
 }else{
