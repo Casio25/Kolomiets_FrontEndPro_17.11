@@ -31,4 +31,4 @@ function generateKey(length, data){
 
 
 let key = generateKey(16, characters);
-console.log(key);
+console.log(String(key).replace(/,/g, ''));
