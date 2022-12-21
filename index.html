@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+
+<div class="buttonPlace">
+    <button class="buyButton" onclick="openForm()">Купити</button>
+</div>
+
+<div class="popupForm" id="popupForm" style="display:none;">
+    <form name="form">
+        <fieldset>
+            <label>ПІБ</label>
+            <input type="text" name="name"><br><br>
+            <label>Місто</label>
+            <select id="city" name="city">
+                <option value="selectCity">Виберіть місто</option> 
+                <option value="Київ" >Київ</option>
+                <option value="Львів" >Львів</option>
+                <option value="Херсон">Херсон &#127817;</option>
+            </select><br><br>
+            <label>Склад Нової пошти</label>
+            <input type="text" name="mail"><br><br>
+            <label>Виберіть тип оплати</label>
+            <select id="paymentMethod" name="paymentMethod">
+                <option value="selectCard">Виберіть метод оплати</option>
+                <option value="Післяоплата">Післяоплата</option>
+                <option value="Оплата карткою">Оплата карткою</option>
+            </select><br><br>
+            <label>Кількість(від  1 до 100)</label>
+            <input type="number" name="cuantity"  min="1" max="100" value="1"><br><br>
+            <label>Коментар(необов'язково)</label>
+            <input type="text" name="comment"><br><br>
+        </fieldset>
+    </form>
+
+
+</div>
+<button class="closeButton" onclick="validateForm()">Підтвердження</button>
+
+<div class="mistake" style="display:none;"></div>
+
+<div class="result" style="display:none;">
+    <ul id="list">
+        
+    </ul>
+</div>
+
+<body>
+    <script src="./hw-13.js"></script>
+</body>
