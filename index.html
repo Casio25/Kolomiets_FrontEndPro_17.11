@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+
+
+<div class="popupForm" id="popupForm" style="display:block;">
+    <form name="form">
+        <fieldset>
+            <label>Ім'я</label>
+            <input type="text" name="firstName"><br><br>
+            <label>Прізвище</label>
+            <input type="text" name="secondName"><br><br>
+            <label>Дата народження</label>
+            <input type="text" name="date"><br><br>
+            <label>Стать</label>
+            <div>
+                <input type="radio" id="genderChoice1"
+                name="gender" value="Чоловік">
+                <label for="genderChoice1">Чоловік</label>
+                <input type="radio" id="genderChoice2"
+                name="gender" value="Жінка">
+                <label for="genderChoice2">Жінка</label>
+            </div><br>
+            <label>Місто</label>
+            <select id="city" name="city">
+                <option value="">Виберіть місто</option>
+                <option value="Київ">Київ</option>
+                <option value="Львів">Львів</option>
+                <option value="Херсон">Херсон &#127817;</option>
+            </select><br><br>
+            <label>Адреса</label>
+            <input type="text" name="mail"><br><br>
+            <label>Мови, якими володіє</label><br>
+            <input type="checkbox" id="language1" name="language" value="English" class="language">
+            <label for="language1"> Англійська</label><br>
+            <input type="checkbox" id="language2" name="language" value="Ukrainan" class="language">
+            <label for="language2"> Українська</label><br>
+            <input type="checkbox" id="language3" name="language" value="German" class="language">
+            <label for="language3"> Німецька</label><br><br>
+
+        </fieldset>
+    </form>
+
+
+</div>
+<button class="closeButton" onclick="validateForm()">Підтвердження</button><br><br>
+
+<input type="button" id="ReserveerButton1" value="save" onclick="saved()" />
+
+<div class="mistake" style="display:none;"></div>
+
+<div class="result" style="display:none;">
+    <ul id="list">
+
+    </ul>
+</div>
+
+<body>
+    <script src="./hw-14.js"></script>
+</body>
