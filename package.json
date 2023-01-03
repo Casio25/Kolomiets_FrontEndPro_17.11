@@ -1,0 +1,23 @@
+{
+  "name": "kolomiets_frontendpro_17.11",
+  "version": "1.0.0",
+  "description": "Repo for homework by Misha Kolomiets",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Casio25/Kolomiets_FrontEndPro_17.11.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Casio25/Kolomiets_FrontEndPro_17.11/issues"
+  },
+  "homepage": "https://github.com/Casio25/Kolomiets_FrontEndPro_17.11#readme",
+  "dependencies": {
+    "moment": "^2.29.4"
+  }
+}
