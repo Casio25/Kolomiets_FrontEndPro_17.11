@@ -13,7 +13,7 @@ server.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
 });
 
-var fs = require("fs");
+const fs = require("fs");
 fs.readFile("text.txt", "utf-8", (err, data) => {
     console.log(data);
     fs.writeFile("text2.txt", data, (err) => {
@@ -23,5 +23,5 @@ fs.readFile("text.txt", "utf-8", (err, data) => {
 
 })
 
-var moment = require('moment'); 
+const moment = require('moment'); 
 
