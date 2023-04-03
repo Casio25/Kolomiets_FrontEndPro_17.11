@@ -4,13 +4,13 @@ import { Navbar } from "./SideMenu";
 import "./App.css";
 import {Main} from "./Main"
 function App() {
-
   return (
-   <>
-    <Header />
-    <Navbar />
-    <Main />
-   </>
+    <>
+      <Header title="My App">
+        <Navbar />
+      </Header>
+      <Main />
+    </>
   );
 }
 
