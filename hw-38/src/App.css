@@ -1,0 +1,13 @@
+
+
+Header{
+    text-align: center;
+    background-color: yellow;
+    font-size: 20px;
+    padding: 50px;
+}
+.main-content{
+    text-align: center;
+    padding: 60px;
+    background-color: rgb(71, 177, 209);
+}
