@@ -8,7 +8,7 @@ export function RegForm(){
             number: ""
         },
         onSubmit: values =>{
-            console.log("Form data", values)
+            alert("Form data", values)
         },
         validate: values => {
            let errors = {}  
