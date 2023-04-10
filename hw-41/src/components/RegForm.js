@@ -25,6 +25,8 @@ export function RegForm(){
 
            if(!values.number){
             errors.number = "Required"
+           }else if (values.number.toString().length !== 12){
+            errors.number = "Wrong length";
            }
 
            return errors;
