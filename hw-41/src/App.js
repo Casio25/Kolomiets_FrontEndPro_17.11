@@ -1,4 +1,5 @@
 import { RegForm } from "./components/RegForm.js";
+
 import "./App.css";
 function App() {
   return (
