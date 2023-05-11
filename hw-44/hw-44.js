@@ -41,6 +41,7 @@ class BigHamburger extends Hamburger {
 let burger = new BigHamburger();
 Hamburger.addKetchup(burger);
 Hamburger.addMayo(burger);
+// first version
 
 
 
