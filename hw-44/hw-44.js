@@ -1,47 +1,47 @@
 class Hamburger {
-    constructor(price, calories) {
-        this.price = price;
-        this.calories = calories;
+    static SIZE_SMALL = { price: 50, calories: 20 };
+    static SIZE_LARGE = { price: 100, calories: 40 };
+    static STUFFING_CHEESE = { price: 10, calories: 20 };
+    static STUFFING_SALAD = { price: 20, calories: 5 };
+    static STUFFING_POTATO = { price: 15, calories: 10 };
+    static TOPPING_MAYO = { price: 20, calories: 5 };
+    static TOPPING_SPICE = { price: 15, calories: 0 };
+
+    constructor(size, stuffing) {
+        this.size = size;
+        this.stuffing = stuffing;
         this.toppings = [];
     }
 
     addTopping(topping) {
         this.toppings.push(topping);
-        this.price += topping.price;
-        this.calories += topping.calories;
-    }
-    calculatePrice(){
-        return this.price
-    }
-    calculateCalories(){
-        return this.calories 
     }
 
-    static addMayo(hamburger) {
-        hamburger.addTopping({ price: 10, calories: 50 });
+    calculatePrice() {
+        const basePrice = this.size.price + this.stuffing.price;
+        const toppingPrice = this.toppings.reduce((sum, topping) => sum + topping.price, 0);
+        return basePrice + toppingPrice;
     }
 
-    static addKetchup(hamburger) {
-        hamburger.addTopping({ price: 5, calories: 20 });
+    calculateCalories() {
+        const baseCalories = this.size.calories + this.stuffing.calories;
+        const toppingCalories = this.toppings.reduce((sum, topping) => sum + topping.calories, 0);
+        return baseCalories + toppingCalories;
     }
 }
 
-class SmallHamburger extends Hamburger {
-    constructor() {
-        super(50, 20);
-    }
-}
 
-class BigHamburger extends Hamburger {
-    constructor() {
-        super(100, 40);
-    }
-}
+const hamburger = new Hamburger(Hamburger.SIZE_SMALL, Hamburger.STUFFING_CHEESE);
 
-let burger = new BigHamburger();
-Hamburger.addKetchup(burger);
-Hamburger.addMayo(burger);
-// first version
+hamburger.addTopping(Hamburger.TOPPING_MAYO);
+
+console.log("Calories: " + hamburger.calculateCalories());
 
 
+console.log("Price: " + hamburger.calculatePrice());
 
+
+hamburger.addTopping(Hamburger.TOPPING_SPICE);
+
+
+console.log("Price with spice: " + hamburger.calculatePrice());
